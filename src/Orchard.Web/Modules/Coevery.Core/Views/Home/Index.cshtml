@@ -1,0 +1,32 @@
+﻿@{
+    Style.Require("pnotify");
+    Style.Require("Module");
+
+    Script.Require("require");
+    Script.Require("jQuery");
+    Script.Require("jQueryUI");
+    Script.Require("jQueryMousewheel");
+
+    Script.Require("pnotify");
+    Script.Require("angular");
+    Script.Require("angularResource");
+    Script.Require("angularRoute");
+
+    Script.Require("angular_UI_Router");
+    Script.Require("angular_couchPotato");
+    Script.Require("ui_utils");
+    Script.Require("i18next");
+    Script.Include("directives/angularjs-i18next-directive.js");
+    Script.Include("directives/layout-directive.js");
+    Script.Include("directives/filter-directive.js");
+    Script.Include("directives/jqGrid-directive.js");
+    Script.Include("controllers/agGridCtrl.js");
+    Script.Include("services/loadingservice.js");
+    Script.Require("ui_bootstrap");
+}
+<div id="loading">Loading...</div>
+<section class="ng-cloak" data-ui-view>
+</section>
+@using (Script.Foot()) {
+    @Display.ClientRoute(IsFrontEnd: true)
+}
